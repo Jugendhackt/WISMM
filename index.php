@@ -41,12 +41,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Suche
+                    <a class="nav-link" href="#">Search  <span class="glyphicon glyphicon-search"></span>
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Add new network</a>
+                    <a class="nav-link" href="#"> <span class="glyphicon glyphicon-plus-sign"></span> Add Net</a>
                 </li>
             </ul>
         </div>
@@ -57,11 +57,10 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-            <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+            <h1 class="mt-5">HIER KOMMT GLEICH ALEXANDERS SUCHE LEISTE HIN :-)</h1>
+            <p class="lead">Hier auch :-)</p>
             <ul class="list-unstyled">
-                <li>Bootstrap 4.0.0-beta</li>
-                <li>jQuery 3.2.1</li>
+                <li>Yippih - Alpackas leben hoch! </li>
             </ul>
         </div>
     </div>

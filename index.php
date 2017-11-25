@@ -87,7 +87,9 @@
                 <br/>
 
 
-<?php
+                    <?php
+
+                    $out_data = "";
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
@@ -97,6 +99,19 @@
 
                         $rows = mysqli_num_rows($result);
 
+                        while($row = $result->fetch_object()) {
+
+                            $data = $row->data;
+                            $rels = explode(",", $data);
+
+                            foreach ($rels as &$value) {
+                                
+                                $out_data .= "<li>$value</li>";
+
+                            }
+                        
+                        }
+                        
                         //echo "<script type='text/javascript'>alert('$rows');</script>";
 
                         if ($rows > 0) {
@@ -129,10 +144,7 @@
                                      aria-labelledby="headingOne">
                                     <div class="panel-body">
                                         <ul>
-                                            <li>Pictures</li>
-                                            <li>Name</li>
-                                            <li>Location</li>
-                                            <li>...</li>
+                                            <?php echo $out_data ?>
                                         </ul>
                                     </div>
                                 </div>

@@ -19,6 +19,9 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/3.3/examples/starter-template/starter-template.css" rel="stylesheet">
 
+    <link href="css/style.css" rel="stylesheet">
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -63,150 +66,6 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
-<style type='text/css'>
-    body {<!--from  w w  w . ja  va  2 s.  c  o m-->
-    margin: 10px;
-    }
-
-    .input-group-m>.form-control, .input-group-m>.input-group-addon,
-    .input-group-m>.input-group-btn>.btn {
-        height: 25px;
-    }
-    .form-group input[type="checkbox"] {
-        display: none;
-    }
-
-    .form-group input[type="checkbox"] + .btn-group > label span {
-        width: 10px;
-    }
-
-    .form-group input[type="checkbox"] + .btn-group > label span:first-child {
-        display: none;
-    }
-    .form-group input[type="checkbox"] + .btn-group > label span:last-child {
-        display: inline-block;
-    }
-
-    .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
-        display: inline-block;
-    }
-    .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
-        display: none;
-    }
-
-    .badge-checkboxes .checkbox input[type="checkbox"],
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"] {
-        /*  Hide the checkbox, but keeps tabbing to it possible. */
-        position: absolute;
-        clip: rect(0 0 0 0);
-    }
-
-    .badge-checkboxes .checkbox label,
-    .badge-checkboxes label.checkbox-inline {
-        padding-left:0; /* Remove space normally used for the checkbox */
-    }
-
-    .badge-checkboxes .checkbox input[type="checkbox"]:checked:focus + .badge,
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:checked:focus + .badge {
-        box-shadow:0 0 2pt 1pt #333;  /* Outline when checkbox is focused/tabbed to */
-    }
-
-    .badge-checkboxes .checkbox input[type="checkbox"]:focus + .badge,
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:focus + .badge {
-        box-shadow:0 0 2pt 1pt #999;  /* Outline when checkbox is focused/tabbed to */
-    }
-
-    .badge-checkboxes .checkbox input[type="checkbox"] + .badge,
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"] + .badge {
-        border:1px solid #999; /* Add outline to badge */
-        
-        /* Make text in badge not selectable */
-       -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    /* Give badges for disabled checkboxes an opacity of 50% */
-    .badge-checkboxes .checkbox input[type="checkbox"]:disabled + .badge,
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:disabled + .badge
-    {
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-      filter: alpha(opacity=50);
-      -moz-opacity: 0.5;
-      -khtml-opacity: 0.5;
-      opacity: 0.5;   
-    }
-
-    /* Remove badge background-color and set text color for not checked options */
-    .badge-checkboxes .checkbox input[type="checkbox"]:not(:checked) + .badge,
-    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:not(:checked) + .badge{
-        background-color:Transparent;
-        color:#999;
-    }
-
-    /*The following css only required for Bootstrap <= 3.1.0 */
-    .badge-checkboxes .checkbox {
-        padding-left:0; /* Remove space normally used for the checkbox */
-    }
-    .badge-checkboxes .disabled label,
-    .badge-checkboxes label.checkbox-inline.disabled {
-        cursor:not-allowed
-    }
-
-    .custom-checkbox {
-  min-height: 1rem;
-  padding-left: 0;
-  margin-right: 0;
-  cursor: pointer; 
-}
-  .custom-checkbox .custom-control-indicator {
-    content: "";
-    display: inline-block;
-    position: relative;
-    width: 30px;
-    height: 10px;
-    background-color: #818181;
-    border-radius: 15px;
-    margin-right: 10px;
-    -webkit-transition: background .3s ease;
-    transition: background .3s ease;
-    vertical-align: middle;
-    margin: 0 16px;
-    box-shadow: none; 
-  }
-    .custom-checkbox .custom-control-indicator:after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      background-color: #f1f1f1;
-      border-radius: 21px;
-      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
-      left: -2px;
-      top: -4px;
-      -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
-      transition: left .3s ease, background .3s ease, box-shadow .1s ease; 
-    }
-  .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
-    background-color: #84c7c1;
-    background-image: none;
-    box-shadow: none !important; 
-  }
-    .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator:after {
-      background-color: #84c7c1;
-      left: 15px; 
-    }
-  .custom-checkbox .custom-control-input:focus ~ .custom-control-indicator {
-    box-shadow: none !important; 
-  }
-
-
-</style>
 
 <div class="container">
     <br/><br/>

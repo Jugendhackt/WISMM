@@ -15,6 +15,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://bootswatch.com/4/yeti/bootstrap.css" rel="stylesheet" id="bootstrap-css">
     <!-- Custom styles for this template -->
+    
     <style>
         body {
             padding-top: 54px;

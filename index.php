@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>KrankenNet</title>
+    <title>KrakenNet</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://blackrockdigital.github.io/startbootstrap-bare/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,7 +57,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5">HIER KOMMT GLEICH ALEXANDERS SUCHE LEISTE HIN :-)</h1>
+            <h1 class="mt-5"><textarea rows="1"></textarea></h1>
             <p class="lead">Hier auch :-)</p>
             <ul class="list-unstyled">
                 <li>Yippih - Alpackas leben hoch! </li>
@@ -69,6 +69,13 @@
 <!-- Bootstrap core JavaScript -->
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/jquery/jquery.min.js"></script>
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $('textarea').keypress(function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+});
+</script>
 
 </body>
 

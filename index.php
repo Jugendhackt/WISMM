@@ -58,7 +58,9 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5"><textarea rows="1"></textarea></h1>
+            <center>
+                <input id="searchinput" name="searchinput" placeholder="Search..." class="form control input-md" type="search">
+            </center>
             <p class="lead">Hier auch :-)</p>
             <ul class="list-unstyled">
                 <li>Yippih - Alpackas leben hoch! </li>
@@ -70,13 +72,6 @@
 <!-- Bootstrap core JavaScript -->
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/jquery/jquery.min.js"></script>
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-    $('textarea').keypress(function(event) {
-    if (event.keyCode == 13) {
-        event.preventDefault();
-    }
-});
-</script>
 
 </body>
 

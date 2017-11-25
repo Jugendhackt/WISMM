@@ -85,7 +85,7 @@
             <div class="card-body">
                 <br/>
                 <br/>
-                <div class="jumbotron">
+
 
 <?php
 
@@ -105,6 +105,7 @@
 
 
                         ?>
+                <div class="jumbotron">
 
                         <br/>
                         <h2><?php echo $out_sq ?> <a href=""><span class="glyphicon glyphicon-new-window"></span></a>
@@ -217,10 +218,8 @@
 
                         <?php
                         } else {
-                            echo '<p>We\'re soooo sorry alpacas, there are no records for '.$_GET['search'].' found in our database at this moment... </p>';
+                            echo '<div class="jumbotron"><p>We\'re soooo sorry alpacas, there are no records for '.$_GET['search'].' found in our database at this moment... </p>';
                         }
-                    } else{
-                    echo '<p>GET empty</p>';
                     }
                     ?>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="refresh" content="30";>
+    <meta http-equiv="refresh" content="180";>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

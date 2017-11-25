@@ -39,9 +39,8 @@
             <a class="navbar-brand" href="#">KrakenNet</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Search</a></li>
-                <li><a href="#about"> <span class="glyphicon glyphicon-plus"></span> Add new network</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -50,18 +49,21 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>DatenKrake</h1>
+        <h1>DatenKrake INSERT PICTURE HERE</h1>
 
         <div class="row">
-            <h2>Stylish Search Box</h2>
+            <h2>Search and disturb our sources, alpacas!</h2>
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                    <input type="text" class="  search-query form-control" placeholder="Search" />
-                    <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="button">
+                    <form action="index.php" method="get">
+                        <input type="text" class="  search-query form-control" placeholder="Search" />
+                        <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="submit">
                                         <span class=" glyphicon glyphicon-search"></span>
                                     </button>
                                 </span>
+                    </form>
+
                 </div>
             </div>
         </div>

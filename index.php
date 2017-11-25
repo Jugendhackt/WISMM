@@ -48,6 +48,64 @@
     </div>
 </nav>
 
+<!-- Custom Accordion Style-->
+<style>
+    .panel-group .panel-heading + .panel-collapse > .panel-body {
+        border: 1px solid #ddd;
+    }
+    .panel-group,
+    .panel-group .panel,
+    .panel-group .panel-heading,
+    .panel-group .panel-heading a,
+    .panel-group .panel-title,
+    .panel-group .panel-title a,
+    .panel-group .panel-body,
+    .panel-group .panel-group .panel-heading + .panel-collapse > .panel-body {
+        border-radius: 2px;
+        border: 0;
+    }
+    .panel-group .panel-heading {
+        padding: 0;
+    }
+    .panel-group .panel-heading a {
+        display: block;
+        background: #668bb1;
+        color: #ffffff;
+        padding: 15px;
+        text-decoration: none;
+        position: relative;
+    }
+    .panel-group .panel-heading a.collapsed {
+        background: #dddddd;
+        color: inherit;
+    }
+    .panel-group .panel-heading a:after {
+        content: '-';
+        position: absolute;
+        right: 20px;
+        top:5px;
+        font-size:30px;
+    }
+    .panel-group .panel-heading a.collapsed:after {
+        content: '+';
+    }
+    .panel-group .panel-collapse {
+        margin-top: 5px !important;
+    }
+    .panel-group .panel-body {
+        background: #F5F5F5;
+        padding: 15px;
+    }
+    .panel-group .panel {
+        background-color: transparent;
+    }
+    .panel-group .panel-body p:last-child,
+    .panel-group .panel-body ul:last-child,
+    .panel-group .panel-body ol:last-child {
+        margin-bottom: 0;
+    }
+</style>
+
 
 <div class="container">
 
@@ -82,53 +140,56 @@
                 <h2>Search results of {search_querry_facebook} <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
-                            <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
-                            <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
                 </div>
-                
-                <br/>
-                
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
-                            <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
-                            <div class="card-body">
-                                <h4 class="card-title">Special title treatment</h4>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+
+
 
     </div>
 
@@ -139,6 +200,16 @@
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
+    <script>
+        function toggleIcon(e) {
+            $(e.target)
+                .prev('.panel-heading')
+                .find(".more-less")
+                .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.panel-group').on('shown.bs.collapse', toggleIcon);
+    </script>
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

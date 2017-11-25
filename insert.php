@@ -31,6 +31,22 @@
 
 <body>
 
+  <script type="text/javascript">
+    
+    function trigger_theft() {
+      
+      cB = document.getElementById("theft_url");
+
+      if (cB.style.display == "none") {
+        cB.style.display = "";
+      }else{
+        cB.style.display = "none";
+      }
+
+    }
+
+  </script>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="img/krake.ico" height="20%" width ="20%"> KrakenNet</a>
@@ -157,6 +173,18 @@
       <div class="col-md-4">
         <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
         <span class="help-block">help</span>  
+      </div>
+    </div>
+
+     <div class="form-group">
+      <div class="col-md-4">
+        
+        <label class="checkbox-inline" for="data_theft">
+        <input name="data_theft" id="data_theft" type="checkbox" onchange="trigger_theft();"> Datendiebstahl?</label>
+        
+        <input style="display: none;" id="theft_url" name="theft_url" placeholder="https://" class="form-control input-md" type="text">
+        <span class="help-block">help</span> 
+
       </div>
     </div>
 

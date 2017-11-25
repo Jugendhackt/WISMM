@@ -112,9 +112,9 @@
     <div class="starter-template">
 
 
-        <h1>{HeadPicture}</h1>
+        <img src="./images/KrakenNetz.png" class="img-responsive" alt="KrakenNetzKrake">
 
-        <h2>Stay transparent - Stay safe, alpacas!</h2>
+
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
@@ -123,6 +123,7 @@
                             <input type="text" name="search" class="form-control" placeholder="Search Network...">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                <h2>Stay transparent - Stay safe, alpacas!</h2>
                             </div>
                         </div>
                     </form>

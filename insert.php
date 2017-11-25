@@ -107,8 +107,9 @@
         <input name="android_camera" id="android_camera" type="checkbox">
         <label class="checkbox-inline" for="android_camera">Kamara</label>
         
-        <label class="checkbox-inline" for="checkboxes-3">
-        <input name="checkboxes" id="checkboxes-3" type="checkbox">Kontakte</label>
+        <label class="checkbox-inline" for="android_contacts">
+        <input name="android_contacts" id="android_contacts" type="checkbox">Kontakte</label>
+
       </div>
     </div>
 
@@ -117,17 +118,17 @@
       <label class="col-md-4 control-label" for="checkboxes">IOS</label>
       <div class="col-md-4">
 
-          <input name="checkboxes" id="checkboxes-0" value="1" type="checkbox">
-          <label class="checkbox-inline" for="checkboxes-0">GPS</label>
-      
-          <input name="checkboxes" id="checkboxes-1" value="2" type="checkbox">
-          <label class="checkbox-inline" for="checkboxes-1">Galarie</label>
-                
-          <input name="checkboxes" id="checkboxes-2" value="3" type="checkbox">
-          <label class="checkbox-inline" for="checkboxes-2">Kamera</label>
+        <input name="ios_gps" id="ios_gps" type="checkbox"> 
+        <label class="checkbox-inline" for="ios_gps">GPS</label>
 
-          <input name="checkboxes" id="checkboxes-3" value="4" type="checkbox">
-          <label class="checkbox-inline" for="checkboxes-3">Kontakte</label>
+        <input name="ios_photos" id="ios_photos" type="checkbox">
+        <label class="checkbox-inline" for="ios_photos">Fotos</label>
+        
+        <input name="ios_camera" id="ios_camera" type="checkbox">
+        <label class="checkbox-inline" for="ios_camera">Kamara</label>
+        
+        <label class="checkbox-inline" for="ios_contacts">
+        <input name="ios_contacts" id="ios_contacts" type="checkbox">Kontakte</label>
 
       </div>
     </div>
@@ -136,25 +137,25 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="textinput">Beziehungen</label>  
       <div class="col-md-4">
-        <input id="textinput" name="textinput" placeholder="Bsp.: Facebook, Instagram" class="form-control input-md" type="text">
+        <input id="textinput" name="relations" placeholder="Bsp.: Facebook, Instagram" class="form-control input-md" type="text">
         <span class="help-block">help</span>  
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Impressum link:</label>  
+      <label class="col-md-4 control-label" for="imprint_url">Impressum link:</label>  
       <div class="col-md-4">
-        <input id="textinput" name="textinput" placeholder="https://" class="form-control input-md" type="text">
+        <input id="textinput" name="imprint_url" placeholder="https://" class="form-control input-md" type="text">
         <span class="help-block">help</span>  
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">AGB link:</label>  
+      <label class="col-md-4 control-label" for="tos_url">AGB link:</label>  
       <div class="col-md-4">
-        <input id="textinput" name="textinput" placeholder="https://" class="form-control input-md" type="text">
+        <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
         <span class="help-block">help</span>  
       </div>
     </div>

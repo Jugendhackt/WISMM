@@ -53,16 +53,16 @@
     margin: 10px;
     }
 
-    .input-group-lg>.form-control, .input-group-lg>.input-group-addon,
-    .input-group-lg>.input-group-btn>.btn {
-        height: 49px;
+    .input-group-m>.form-control, .input-group-m>.input-group-addon,
+    .input-group-m>.input-group-btn>.btn {
+        height: 25px;
     }
     .form-group input[type="checkbox"] {
         display: none;
     }
 
     .form-group input[type="checkbox"] + .btn-group > label span {
-        width: 20px;
+        width: 10px;
     }
 
     .form-group input[type="checkbox"] + .btn-group > label span:first-child {
@@ -199,7 +199,7 @@
 
             </fieldset>
         </form>
-
+<small>
         <div class="[ form-group ]">
             <input type="checkbox" name="fancy-checkbox-default" id="fancy-checkbox-default" autocomplete="off" />
             <div class="[ btn-group ]">
@@ -225,7 +225,7 @@
                 </label>
             </div>
         </div>
-
+</small>  
     </div>
 
 

@@ -28,6 +28,22 @@
 
 <body>
 
+  <script type="text/javascript">
+    
+    function trigger_theft() {
+      
+      cB = document.getElementById("theft_url");
+
+      if (cB.style.display == "none") {
+        cB.style.display = "";
+      }else{
+        cB.style.display = "none";
+      }
+
+    }
+
+  </script>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">

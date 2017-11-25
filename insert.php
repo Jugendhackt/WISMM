@@ -32,7 +32,7 @@
     
     function trigger_theft() {
       
-      cB = document.getElementById("theft_url");
+      cB = document.getElementById("theft_group");
 
       if (cB.style.display == "none") {
         cB.style.display = "";
@@ -207,17 +207,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="checkboxes">previous data thefts:</label>
+                    <label class="col-md-4 control-label" for="checkboxes">previous data thefts?</label>
                     <div class="col-md-4">
 
-                        <input name="ios_gps" id="ios_gps" type="checkbox">
-                        <label class="checkbox-inline" for="ios_gps">GPS</label>
+                        <input name="ios_gps" id="ios_gps" type="checkbox" onchange="trigger_theft()">
+                        <label class="checkbox-inline" for="ios_gps">YES</label>
 
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="tos_url">theft url:</label>
+                <div class="form-group" id="theft_group" style="display: none">
+                    <label class="col-md-4 control-label" for="tos_url">source url:</label>
                     <div class="col-md-4">
                         <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
                         <span class="help-block">help</span>
@@ -235,8 +235,6 @@
             </fieldset>
         </form>
     </div>
-
-
 
 
     <div class="form-group badge-checkboxes">

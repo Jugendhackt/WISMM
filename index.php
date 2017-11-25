@@ -26,6 +26,22 @@
             }
         }
 
+        /* custom search bar style */
+        #imaginary_container{
+            margin-top:20%; /* Don't copy this */
+        }
+        .stylish-input-group .input-group-addon{
+            background: white !important;
+        }
+        .stylish-input-group .form-control{
+            border-right:0;
+            box-shadow:0 0 0;
+            border-color:#ccc;
+        }
+        .stylish-input-group button{
+            border:0;
+            background:transparent;
+        }
     </style>
 
 </head>
@@ -54,17 +70,19 @@
     </div>
 </nav>
 
-<!-- Page Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 text-center">
-            <center>
-                <input id="searchinput" name="searchinput" placeholder="Search..." class="form control input-md" type="search">
-            </center>
-            <p class="lead">Hier auch :-)</p>
-            <ul class="list-unstyled">
-                <li>Yippih - Alpackas leben hoch! </li>
-            </ul>
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

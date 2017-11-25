@@ -54,9 +54,9 @@
     <div class="starter-template">
 
 
-        <h1>INSERT PICTURE HERE</h1>
+        <h1>{HeadPicture}</h1>
 
-        <h2>Search and disturb our sources, alpacas!</h2>
+        <h2>Stay transparent - Stay safe, alpacas!</h2>
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
@@ -85,7 +85,7 @@
                 <br/>
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
                             <div class="card-body">
                                 <h4 class="card-title">Special title treatment</h4>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
                             <div class="card-body">
                                 <h4 class="card-title">Special title treatment</h4>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -108,7 +108,7 @@
                 
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
                             <div class="card-body">
                                 <h4 class="card-title">Special title treatment</h4>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                        <div class="card" style="background-color: #03C0CD; padding: 15px; border-radius: 10px;">
                             <div class="card-body">
                                 <h4 class="card-title">Special title treatment</h4>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>

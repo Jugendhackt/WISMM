@@ -25,6 +25,6 @@
 
 
   $db = new db();
-  $db->connect("xxxx", "xxxx", "xxxx", "xxxx");
-  
+  $db->connect("sql535.your-server.de", "krakennetz_w", "yXc2v09z90v0j69j", "krakennetz");
+
 ?>

@@ -220,7 +220,7 @@
                         } else {
                             echo '<div class="jumbotron"><p>
                                     We\'re soooo sorry alpacas, there are no records for '.$_GET['search'].' found in our database at this moment... <br/><br/>
-                                    <img src="images/jh_logo.png" height="10%" width="10%"><br/>
+                                    <img src="images/jh.png"><br/>
                                    <a href="insert.php" data-toggle="tooltip" data-placement="bottom" title="Add new datas"> <font color="black"><span class="glyphicon glyphicon-plus-sign"></span></a></font></p>';
                         }
                     }

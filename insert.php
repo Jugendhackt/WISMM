@@ -19,6 +19,9 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/3.3/examples/starter-template/starter-template.css" rel="stylesheet">
 
+    <link href="css/style.css" rel="stylesheet">
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -64,44 +67,12 @@
     </div>
 </nav>
 
-<style type='text/css'>
-    body {<!--from  w w  w . ja  va  2 s.  c  o m-->
-    margin: 10px;
-    }
-
-    .input-group-m>.form-control, .input-group-m>.input-group-addon,
-    .input-group-m>.input-group-btn>.btn {
-        height: 25px;
-    }
-    .form-group input[type="checkbox"] {
-        display: none;
-    }
-
-    .form-group input[type="checkbox"] + .btn-group > label span {
-        width: 10px;
-    }
-
-    .form-group input[type="checkbox"] + .btn-group > label span:first-child {
-        display: none;
-    }
-    .form-group input[type="checkbox"] + .btn-group > label span:last-child {
-        display: inline-block;
-    }
-
-    .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
-        display: inline-block;
-    }
-    .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
-        display: none;
-    }
-</style>
-
 <div class="container">
     <br/><br/>
     <div class="jumbotron">
 
 
-        <form class="form-horizontal" action="handler/insertH.php" method="GET">
+        <form class="form-horizontal" action="" method="GET">
             <fieldset>
                 <!-- Form Name -->
                 <h2>Add new Network </h2>
@@ -123,58 +94,80 @@
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">Data</label>
                     <div class="col-md-4">
 
-                        <input name="data_photos" id="data_photos" type="checkbox">
-                        <label class="checkbox-inline" for="data_photos">Pictures</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_names">
+                            <span class="badge">Contacts</span>
+                        </label>
 
-                        <input name="data_names" id="data_names" type="checkbox">
-                        <label class="checkbox-inline" for="data_names">Contacts</label>
-
-                        <input name="data_contacts" id="data_contacts" type="checkbox">
-                        <label class="checkbox-inline" for="data_contacts">Massages</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_contacts">
+                            <span class="badge">Messages</span>
+                        </label>
 
                     </div>
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">Android</label>
                     <div class="col-md-4">
 
-                        <input name="android_gps" id="android_gps" type="checkbox">
-                        <label class="checkbox-inline" for="android_gps">GPS</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_gps">
+                            <span class="badge">GPS</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
 
-                        <input name="android_photos" id="android_photos" type="checkbox">
-                        <label class="checkbox-inline" for="android_photos">Pictures</label>
-
-                        <input name="android_camera" id="android_camera" type="checkbox">
-                        <label class="checkbox-inline" for="android_camera">Camera</label>
-
-                        <label class="checkbox-inline" for="android_contacts">
-                            <input name="android_contacts" id="android_contacts" type="checkbox">Contacts</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_camera">
+                            <span class="badge">Camera</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_contacts">
+                            <span class="badge">Contacts</span>
+                        </label>
 
                     </div>
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">IOS</label>
                     <div class="col-md-4">
 
-                        <input name="ios_gps" id="ios_gps" type="checkbox">
-                        <label class="checkbox-inline" for="ios_gps">GPS</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_gps">
+                            <span class="badge">GPS</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
 
-                        <input name="ios_photos" id="ios_photos" type="checkbox">
-                        <label class="checkbox-inline" for="ios_photos">Pictures</label>
-
-                        <input name="ios_camera" id="ios_camera" type="checkbox">
-                        <label class="checkbox-inline" for="ios_camera">Camera</label>
-
-                        <label class="checkbox-inline" for="ios_contacts">
-                            <input name="ios_contacts" id="ios_contacts" type="checkbox">Contacts</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_camera">
+                            <span class="badge">Camera</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_contacts">
+                            <span class="badge">Contacts</span>
+                        </label>
 
                     </div>
                 </div>
@@ -209,8 +202,10 @@
                     <label class="col-md-4 control-label" for="checkboxes">previous data thefts?</label>
                     <div class="col-md-4">
 
-                        <input name="ios_gps" id="ios_gps" type="checkbox" onchange="trigger_theft()">
-                        <label class="checkbox-inline" for="ios_gps">YES</label>
+                    <label class="custom-control custom-checkbox">
+                        <input onchange="trigger_theft()" type="checkbox" class="custom-control-input" hidden="hidden">
+                        <span class="custom-control-indicator"></span>
+                    </label>
 
                     </div>
                 </div>
@@ -234,30 +229,6 @@
             </fieldset>
         </form>
     </div>
-
-
-    <div class="form-group badge-checkboxes">
-        <label>Select some options - inline checkboxes</label>
-        <div>
-            <label class="checkbox-inline">
-                <input type="checkbox" value="">
-                <span class="badge">Option 1</span>
-            </label>
-            <label class="checkbox-inline">
-                <input type="checkbox" value="" checked="">
-                <span class="badge">Option 2</span>
-            </label>
-            <label class="checkbox-inline disabled">
-                <input type="checkbox" value="" disabled="">
-                <span class="badge">Option 3</span>
-            </label>
-            <label class="checkbox-inline disabled">
-                <input type="checkbox" value="" disabled="" checked="">
-                <span class="badge">Option 4</span>
-            </label>
-        </div>
-    </div>
-
 
 </div><!-- /.container -->
 

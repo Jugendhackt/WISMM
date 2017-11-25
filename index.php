@@ -88,7 +88,7 @@
     <div class="starter-template">
 
 
-        <img src="https://github.com/Jugendhackt/KrakenNetz/blob/master/images/Lupe_2.png?raw=true" class="img.responsive" alt="Lupe">
+        <img src="https://github.com/Jugendhackt/KrakenNetz/blob/master/images/Lupe_2.png?raw=true" class="img.responsive" width="15%" alt="Lupe">
 
         <h2>Stay transparent - Stay safe - Stay alpacas!</h2>
         <div class="row">

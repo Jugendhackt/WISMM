@@ -76,7 +76,7 @@
         position: relative;
     }
     .panel-group .panel-heading a.collapsed {
-        background: #dddddd;
+        background: #9eceff;;
         color: inherit;
     }
     .panel-group .panel-heading a:after {

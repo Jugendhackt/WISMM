@@ -90,6 +90,7 @@
                     <?php
 
                     $out_data = "";
+                    $out_url = "";
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
@@ -100,6 +101,8 @@
                         $rows = mysqli_num_rows($result);
 
                         while($row = $result->fetch_object()) {
+
+                            $out_url = $row->url;
 
                             $data = $row->data;
                             $rels = explode(",", $data);
@@ -123,7 +126,7 @@
                 <div class="jumbotron">
 
                         <br/>
-                        <h2><?php echo $out_sq ?> <a href=""><span class="glyphicon glyphicon-new-window"></span></a>
+                        <h2><?php echo $out_sq ?> <a href="<?php echo $out_url ?>"><span class="glyphicon glyphicon-new-window"></span></a>
                         </h2>
                         <br/>
                         <br/>

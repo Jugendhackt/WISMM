@@ -1,3 +1,33 @@
+<?php
+
+    require "handler/dbH.php";
+
+
+    $out_sq = "Please search";
+
+    if(isset($_GET['search']) AND !empty($_GET['search'])){
+        
+        $sq = $_GET['search'];
+
+        $result = $db->sendQuery("SELECT * FROM `network` WHERE `name` = '$sq'");
+
+        $rows = mysqli_num_rows($result);
+
+        //echo "<script type='text/javascript'>alert('$rows');</script>";
+
+        if ($rows > 0) {
+            $found = true;
+            $out_sq = "Search results for " . $sq;
+        }else{
+            $found = false;
+            $out_sq = "There are no search results for " . $sq;
+        }
+
+    }else{
+         echo '<p>GET empty</p>';
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +38,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>KrakenNet</title>
 
@@ -33,6 +62,7 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -114,7 +144,7 @@
 
         <!-- <img src="./images/KrakenNetz.png" class="img-responsive" alt="KrakenNetzKrake"> -->
 
-        <h2>Stay transparent - Stay safe, alpacas!</h2>
+        <h2>Stay transparent - Stay safe - Stay alpacas!</h2>
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
@@ -123,11 +153,7 @@
                             <input type="text" name="search" class="form-control" placeholder="Search Network...">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-<<<<<<< HEAD
-                                <h2>Stay transparent - Stay safe - Stay alpacas!</h2>
-=======
 
->>>>>>> 118dedf943d9294ecb0e306993cd8cbae77cf1c9
                             </div>
                         </div>
                     </form>
@@ -139,15 +165,17 @@
             <div class="card-body">
                 <br/>
                 <br/>
-                <br/>
                 <div class="jumbotron">
+
+                    <?php if ($found){?>
+
                     <br/>
-                <h2>Search results of {search_querry_facebook} <span class="glyphicon glyphicon-new-window"></span></h2>
+                <h2><?php echo $out_sq ?> <a href="" <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
                 
 
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel-group" role="tablist" aria-multiselectable="true">
 
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
@@ -159,7 +187,12 @@
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <ul>
+                            <li>Pictures</li>
+                            <li>Name</li>
+                            <li>Location</li>
+                            <li>...</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -194,33 +227,44 @@
                 </div>
             </div>
 
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Previous Data Thefts
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
 
 
     </div>
 
+                    <?php } else {?>
 
-</div><!-- /.container -->
+                        <h1>Search empty or no result found!</h1>
 
+                    <?php } ?>
+
+</div><!-- /.jumbo -->
+            </div>
+        </div>
+    </div>
+</div><!-- /.container-->
 
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
-    <script>
-        function toggleIcon(e) {
-            $(e.target)
-                .prev('.panel-heading')
-                .find(".more-less")
-                .toggleClass('glyphicon-plus glyphicon-minus');
-        }
-        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
-        $('.panel-group').on('shown.bs.collapse', toggleIcon);
-    </script>
+
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
-

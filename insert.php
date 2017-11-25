@@ -32,7 +32,7 @@
     
     function trigger_theft() {
       
-      cB = document.getElementById("theft_url");
+      cB = document.getElementById("theft_group");
 
       if (cB.style.display == "none") {
         cB.style.display = "";
@@ -108,9 +108,9 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="network_name">Netzwerk</label>
+                    <label class="col-md-4 control-label" for="network_name">Network</label>
                     <div class="col-md-4">
-                        <input id="textinput" name="network_name" placeholder="Name des Netzwerks" class="form-control input-md" required="" type="text">
+                        <input id="textinput" name="network_name" placeholder="Name of the Network" class="form-control input-md" required="" type="text">
                      </div>
                 </div>
 
@@ -124,17 +124,17 @@
 
                 <!-- Multiple Checkboxes (inline) -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="checkboxes">Daten</label>
+                    <label class="col-md-4 control-label" for="checkboxes">Data</label>
                     <div class="col-md-4">
 
                         <input name="data_photos" id="data_photos" type="checkbox">
-                        <label class="checkbox-inline" for="data_photos">Fotos</label>
+                        <label class="checkbox-inline" for="data_photos">Pictures</label>
 
                         <input name="data_names" id="data_names" type="checkbox">
-                        <label class="checkbox-inline" for="data_names">Namen</label>
+                        <label class="checkbox-inline" for="data_names">Contacts</label>
 
                         <input name="data_contacts" id="data_contacts" type="checkbox">
-                        <label class="checkbox-inline" for="data_contacts">Kontakte</label>
+                        <label class="checkbox-inline" for="data_contacts">Massages</label>
 
                     </div>
                 </div>
@@ -148,13 +148,13 @@
                         <label class="checkbox-inline" for="android_gps">GPS</label>
 
                         <input name="android_photos" id="android_photos" type="checkbox">
-                        <label class="checkbox-inline" for="android_photos">Fotos</label>
+                        <label class="checkbox-inline" for="android_photos">Pictures</label>
 
                         <input name="android_camera" id="android_camera" type="checkbox">
-                        <label class="checkbox-inline" for="android_camera">Kamara</label>
+                        <label class="checkbox-inline" for="android_camera">Camera</label>
 
                         <label class="checkbox-inline" for="android_contacts">
-                            <input name="android_contacts" id="android_contacts" type="checkbox">Kontakte</label>
+                            <input name="android_contacts" id="android_contacts" type="checkbox">Contacts</label>
 
                     </div>
                 </div>
@@ -168,29 +168,29 @@
                         <label class="checkbox-inline" for="ios_gps">GPS</label>
 
                         <input name="ios_photos" id="ios_photos" type="checkbox">
-                        <label class="checkbox-inline" for="ios_photos">Fotos</label>
+                        <label class="checkbox-inline" for="ios_photos">Pictures</label>
 
                         <input name="ios_camera" id="ios_camera" type="checkbox">
-                        <label class="checkbox-inline" for="ios_camera">Kamara</label>
+                        <label class="checkbox-inline" for="ios_camera">Camera</label>
 
                         <label class="checkbox-inline" for="ios_contacts">
-                            <input name="ios_contacts" id="ios_contacts" type="checkbox">Kontakte</label>
+                            <input name="ios_contacts" id="ios_contacts" type="checkbox">Contacts</label>
 
                     </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Beziehungen <a data-toggle="tooltip" data-placement="top" title="Comma seperated!"><span class="glyphicon glyphicon-question-sign"></span></a>
+                    <label class="col-md-4 control-label" for="textinput">Relations <a data-toggle="tooltip" data-placement="top" title="Comma seperated!"><span class="glyphicon glyphicon-question-sign"></span></a>
                     </label>
                     <div class="col-md-4">
-                        <input id="textinput" name="relations" placeholder="Bsp.: Facebook, Instagram" class="form-control input-md" type="text">
+                        <input id="textinput" name="relations" placeholder="Example: Facebook, Instagram" class="form-control input-md" type="text">
                     </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="imprint_url">Impressum link:</label>
+                    <label class="col-md-4 control-label" for="imprint_url">Imprint link:</label>
                     <div class="col-md-4">
                         <input id="textinput" name="imprint_url" placeholder="https://" class="form-control input-md" type="text">
                     </div>
@@ -198,7 +198,25 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="tos_url">AGB link:</label>
+                    <label class="col-md-4 control-label" for="tos_url">terms and conditions link:</label>
+                    <div class="col-md-4">
+                        <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
+                        <span class="help-block">help</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="checkboxes">previous data thefts?</label>
+                    <div class="col-md-4">
+
+                        <input name="ios_gps" id="ios_gps" type="checkbox" onchange="trigger_theft()">
+                        <label class="checkbox-inline" for="ios_gps">YES</label>
+
+                    </div>
+                </div>
+
+                <div class="form-group" id="theft_group" style="display: none">
+                    <label class="col-md-4 control-label" for="tos_url">source url:</label>
                     <div class="col-md-4">
                         <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
                         <span class="help-block">help</span>
@@ -216,8 +234,6 @@
             </fieldset>
         </form>
     </div>
-
-
 
 
     <div class="form-group badge-checkboxes">

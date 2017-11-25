@@ -5,7 +5,7 @@
 
     $out_sq = "Please search";
 
-    if(isset($_GET['search'])){
+    if(isset($_GET['search']) AND !empty($_GET['search'])){
         
         $sq = $_GET['search'];
 
@@ -16,14 +16,15 @@
         //echo "<script type='text/javascript'>alert('$rows');</script>";
 
         if ($rows > 0) {
+            $found = true;
             $out_sq = "Search results for " . $sq;
         }else{
+            $found = false;
             $out_sq = "There are no search results for " . $sq;
         }
 
-
     }else{
-
+         echo '<p>GET empty</p>';
     }
 
 ?>
@@ -37,7 +38,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>KrakenNet</title>
 
@@ -166,8 +166,11 @@
                 <br/>
                 <br/>
                 <div class="jumbotron">
+
+                    <?php if ($found){?>
+
                     <br/>
-                <h2><?php echo $out_sq ?> <span class="glyphicon glyphicon-new-window"></span></h2>
+                <h2><?php echo $out_sq ?> <a href="" <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
                 
@@ -237,9 +240,17 @@
 
     </div>
 
+                    <?php } else {?>
 
-</div><!-- /.container -->
+                        <h1>Search empty or no result found!</h1>
 
+                    <?php } ?>
+
+</div><!-- /.jumbo -->
+            </div>
+        </div>
+    </div>
+</div><!-- /.container-->
 
 
 <!-- Bootstrap core JavaScript

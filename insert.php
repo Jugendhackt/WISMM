@@ -108,8 +108,7 @@
 
                 <!-- Text input-->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="network_name">Network
-                    </label>
+                    <label class="col-md-4 control-label" for="network_name">Network</label>
                     <div class="col-md-4">
                         <input id="textinput" name="network_name" placeholder="Name of the Network" class="form-control input-md" required="" type="text">
                      </div>

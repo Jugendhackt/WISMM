@@ -1,3 +1,32 @@
+<?php
+
+    require "handler/dbH.php";
+
+
+    $out_sq = "Please search";
+
+    if(isset($_GET['search'])){
+        
+        $sq = $_GET['search'];
+
+        $result = $db->sendQuery("SELECT * FROM `network` WHERE `name` = '$sq'");
+
+        $rows = mysqli_num_rows($result);
+
+        //echo "<script type='text/javascript'>alert('$rows');</script>";
+
+        if ($rows > 0) {
+            $out_sq = "Search results for " . $sq;
+        }else{
+            $out_sq = "There are no search results for " . $sq;
+        }
+
+
+    }else{
+
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -138,7 +167,7 @@
                 <br/>
                 <div class="jumbotron">
                     <br/>
-                <h2>Search results of {search_querry_facebook} <span class="glyphicon glyphicon-new-window"></span></h2>
+                <h2><?php echo $out_sq ?> <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
                 
@@ -223,4 +252,3 @@
 <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
-

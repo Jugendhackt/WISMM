@@ -218,7 +218,10 @@
 
                         <?php
                         } else {
-                            echo '<div class="jumbotron"><p>We\'re soooo sorry alpacas, there are no records for '.$_GET['search'].' found in our database at this moment... </p>';
+                            echo '<div class="jumbotron"><p>
+                                    We\'re soooo sorry alpacas, there are no records for '.$_GET['search'].' found in our database at this moment... <br/><br/>
+                                    <img src="images/jh_logo.png" height="10%" width="10%"><br/>
+                                   <a href="insert.php" data-toggle="tooltip" data-placement="bottom" title="Add new datas"> <font color="black"><span class="glyphicon glyphicon-plus-sign"></span></a></font></p>';
                         }
                     }
                     ?>
@@ -230,12 +233,18 @@
 </div><!-- /.container-->
 
 
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
-
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>

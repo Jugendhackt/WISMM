@@ -88,7 +88,7 @@
         }
     </style>
 
-    <div class="wrapper"></div>
+    <div class="wrapper">
     <div class="starter-template">
 
         <h1>INSERT PICTURE HERE</h1>

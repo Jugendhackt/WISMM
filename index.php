@@ -36,69 +36,32 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#">KrakenNet</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Search</a></li>
+                <li class="active"><a href="#">Search <span class="glyphicon glyphicon-search"></span></a></li>
+                <li><a href="insert.php">Add Network <span class="glyphicon glyphicon-plus-sign"></span></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
+
 <div class="container">
-
-    <style>
-        .wrapper {
-            height: 100%;
-            width: 100%;
-            left:0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-            background-size: 1800% 1800%;
-            color: black;
-
-            -webkit-animation: rainbow 18s ease infinite;
-            -z-animation: rainbow 18s ease infinite;
-            -o-animation: rainbow 18s ease infinite;
-            animation: rainbow 18s ease infinite;}
-
-        @-webkit-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
-        }
-        @-moz-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
-        }
-        @-o-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
-        }
-        @keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
-        }
-    </style>
-
 
     <div class="starter-template">
 
         <h1>INSERT PICTURE HERE</h1>
 
+        <h2>Search and disturb our sources, alpacas!</h2>
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <form method="get">
                         <div class="input-group input-group-lg">
-                            <input type="text" name="search" class="form-control" placeholder="Search">
+                            <input type="text" name="search" class="form-control" placeholder="Search Network...">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                             </div>
@@ -107,12 +70,14 @@
                 </div>
             </div>
         </div>
-        <p>Search and disturb our sources, alpacas!</p>
-         
+
+
 
     </div>
 
+
 </div><!-- /.container -->
+
 
 
 <!-- Bootstrap core JavaScript

@@ -88,7 +88,7 @@
         }
     </style>
 
-    <div class="wrapper">
+
     <div class="starter-template">
 
         <h1>INSERT PICTURE HERE</h1>
@@ -110,7 +110,7 @@
         <p>Search and disturb our sources, alpacas!</p>
 
 
-
+        <div class="wrapper"></div>
 
     </div>
 

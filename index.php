@@ -52,7 +52,7 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>DatenKrake</h1>
+        <h1>KrakenNetz</h1>
 
         <div class="row">
             <h2>Stylish Search Box</h2>

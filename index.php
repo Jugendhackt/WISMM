@@ -72,7 +72,60 @@
             </div>
         </div>
 
-
+        <div class="card">
+            <div class="card-body">
+                <br/>
+                <br/>
+                <br/>
+                <h1>FACEBOOK</h1>
+                <br/>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <br/>
+                
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card" style="background-color: #5bc0de; padding: 15px; border-radius: 10px;">
+                            <div class="card-body">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

@@ -94,6 +94,118 @@
     .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
         display: none;
     }
+
+    .badge-checkboxes .checkbox input[type="checkbox"],
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"] {
+        /*  Hide the checkbox, but keeps tabbing to it possible. */
+        position: absolute;
+        clip: rect(0 0 0 0);
+    }
+
+    .badge-checkboxes .checkbox label,
+    .badge-checkboxes label.checkbox-inline {
+        padding-left:0; /* Remove space normally used for the checkbox */
+    }
+
+    .badge-checkboxes .checkbox input[type="checkbox"]:checked:focus + .badge,
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:checked:focus + .badge {
+        box-shadow:0 0 2pt 1pt #333;  /* Outline when checkbox is focused/tabbed to */
+    }
+
+    .badge-checkboxes .checkbox input[type="checkbox"]:focus + .badge,
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:focus + .badge {
+        box-shadow:0 0 2pt 1pt #999;  /* Outline when checkbox is focused/tabbed to */
+    }
+
+    .badge-checkboxes .checkbox input[type="checkbox"] + .badge,
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"] + .badge {
+        border:1px solid #999; /* Add outline to badge */
+        
+        /* Make text in badge not selectable */
+       -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Give badges for disabled checkboxes an opacity of 50% */
+    .badge-checkboxes .checkbox input[type="checkbox"]:disabled + .badge,
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:disabled + .badge
+    {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      filter: alpha(opacity=50);
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5;   
+    }
+
+    /* Remove badge background-color and set text color for not checked options */
+    .badge-checkboxes .checkbox input[type="checkbox"]:not(:checked) + .badge,
+    .badge-checkboxes label.checkbox-inline input[type="checkbox"]:not(:checked) + .badge{
+        background-color:Transparent;
+        color:#999;
+    }
+
+    /*The following css only required for Bootstrap <= 3.1.0 */
+    .badge-checkboxes .checkbox {
+        padding-left:0; /* Remove space normally used for the checkbox */
+    }
+    .badge-checkboxes .disabled label,
+    .badge-checkboxes label.checkbox-inline.disabled {
+        cursor:not-allowed
+    }
+
+    .custom-checkbox {
+  min-height: 1rem;
+  padding-left: 0;
+  margin-right: 0;
+  cursor: pointer; 
+}
+  .custom-checkbox .custom-control-indicator {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 10px;
+    background-color: #818181;
+    border-radius: 15px;
+    margin-right: 10px;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+    vertical-align: middle;
+    margin: 0 16px;
+    box-shadow: none; 
+  }
+    .custom-checkbox .custom-control-indicator:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: #f1f1f1;
+      border-radius: 21px;
+      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+      left: -2px;
+      top: -4px;
+      -webkit-transition: left .3s ease, background .3s ease, box-shadow .1s ease;
+      transition: left .3s ease, background .3s ease, box-shadow .1s ease; 
+    }
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+    background-color: #84c7c1;
+    background-image: none;
+    box-shadow: none !important; 
+  }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator:after {
+      background-color: #84c7c1;
+      left: 15px; 
+    }
+  .custom-checkbox .custom-control-input:focus ~ .custom-control-indicator {
+    box-shadow: none !important; 
+  }
+
+
 </style>
 
 <div class="container">
@@ -101,7 +213,7 @@
     <div class="jumbotron">
 
 
-        <form class="form-horizontal" action="handler/insertH.php" method="GET">
+        <form class="form-horizontal" action="" method="GET">
             <fieldset>
                 <!-- Form Name -->
                 <h2>Add new Network </h2>
@@ -123,58 +235,80 @@
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">Data</label>
                     <div class="col-md-4">
 
-                        <input name="data_photos" id="data_photos" type="checkbox">
-                        <label class="checkbox-inline" for="data_photos">Pictures</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_names">
+                            <span class="badge">Contacts</span>
+                        </label>
 
-                        <input name="data_names" id="data_names" type="checkbox">
-                        <label class="checkbox-inline" for="data_names">Contacts</label>
-
-                        <input name="data_contacts" id="data_contacts" type="checkbox">
-                        <label class="checkbox-inline" for="data_contacts">Massages</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="data_contacts">
+                            <span class="badge">Messages</span>
+                        </label>
 
                     </div>
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">Android</label>
                     <div class="col-md-4">
 
-                        <input name="android_gps" id="android_gps" type="checkbox">
-                        <label class="checkbox-inline" for="android_gps">GPS</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_gps">
+                            <span class="badge">GPS</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
 
-                        <input name="android_photos" id="android_photos" type="checkbox">
-                        <label class="checkbox-inline" for="android_photos">Pictures</label>
-
-                        <input name="android_camera" id="android_camera" type="checkbox">
-                        <label class="checkbox-inline" for="android_camera">Camera</label>
-
-                        <label class="checkbox-inline" for="android_contacts">
-                            <input name="android_contacts" id="android_contacts" type="checkbox">Contacts</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_camera">
+                            <span class="badge">Camera</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="android_contacts">
+                            <span class="badge">Contacts</span>
+                        </label>
 
                     </div>
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
-                <div class="form-group">
+                <div class="form-group badge-checkboxes">
                     <label class="col-md-4 control-label" for="checkboxes">IOS</label>
                     <div class="col-md-4">
 
-                        <input name="ios_gps" id="ios_gps" type="checkbox">
-                        <label class="checkbox-inline" for="ios_gps">GPS</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_gps">
+                            <span class="badge">GPS</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_photos">
+                            <span class="badge">Pictures</span>
+                        </label>
 
-                        <input name="ios_photos" id="ios_photos" type="checkbox">
-                        <label class="checkbox-inline" for="ios_photos">Pictures</label>
-
-                        <input name="ios_camera" id="ios_camera" type="checkbox">
-                        <label class="checkbox-inline" for="ios_camera">Camera</label>
-
-                        <label class="checkbox-inline" for="ios_contacts">
-                            <input name="ios_contacts" id="ios_contacts" type="checkbox">Contacts</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_camera">
+                            <span class="badge">Camera</span>
+                        </label>
+                                
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="ios_contacts">
+                            <span class="badge">Contacts</span>
+                        </label>
 
                     </div>
                 </div>
@@ -209,8 +343,10 @@
                     <label class="col-md-4 control-label" for="checkboxes">previous data thefts?</label>
                     <div class="col-md-4">
 
-                        <input name="ios_gps" id="ios_gps" type="checkbox" onchange="trigger_theft()">
-                        <label class="checkbox-inline" for="ios_gps">YES</label>
+                    <label class="custom-control custom-checkbox">
+                        <input onchange="trigger_theft()" type="checkbox" class="custom-control-input" hidden="hidden">
+                        <span class="custom-control-indicator"></span>
+                    </label>
 
                     </div>
                 </div>
@@ -234,30 +370,6 @@
             </fieldset>
         </form>
     </div>
-
-
-    <div class="form-group badge-checkboxes">
-        <label>Select some options - inline checkboxes</label>
-        <div>
-            <label class="checkbox-inline">
-                <input type="checkbox" value="">
-                <span class="badge">Option 1</span>
-            </label>
-            <label class="checkbox-inline">
-                <input type="checkbox" value="" checked="">
-                <span class="badge">Option 2</span>
-            </label>
-            <label class="checkbox-inline disabled">
-                <input type="checkbox" value="" disabled="">
-                <span class="badge">Option 3</span>
-            </label>
-            <label class="checkbox-inline disabled">
-                <input type="checkbox" value="" disabled="" checked="">
-                <span class="badge">Option 4</span>
-            </label>
-        </div>
-    </div>
-
 
 </div><!-- /.container -->
 

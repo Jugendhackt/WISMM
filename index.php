@@ -40,7 +40,7 @@
             <a class="navbar-brand" href="#">KrakenNet</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Search <span class="glyphicon glyphicon-search"></span></a></li>
                 <li><a href="insert.php">Add Network <span class="glyphicon glyphicon-plus-sign"></span></a></li>
             </ul>

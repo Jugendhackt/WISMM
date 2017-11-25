@@ -56,15 +56,14 @@
             <h2>Search and disturb our sources, alpacas!</h2>
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
-                    <form action="index.php" method="get">
-                        <input type="text" class="  search-query form-control" placeholder="Search" />
-                        <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="submit">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
+                    <form method="get">
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
                     </form>
-
                 </div>
             </div>
         </div>

@@ -199,33 +199,31 @@
 
             </fieldset>
         </form>
-<small>
-        <div class="[ form-group ]">
-            <input type="checkbox" name="fancy-checkbox-default" id="fancy-checkbox-default" autocomplete="off" />
-            <div class="[ btn-group ]">
-                <label for="fancy-checkbox-default" class="[ btn btn-default ]">
-                    <span class="[ glyphicon glyphicon-ok ]"></span>
-                    <span> </span>
-                </label>
-                <label for="fancy-checkbox-default" class="[ btn btn-default active ]">
-                    GPS
-                </label>
-            </div>
-        </div>
+    </div>
 
-        <div class="[ form-group ]">
-            <input type="checkbox" name="fancy-checkbox-default2" id="fancy-checkbox-default2" autocomplete="off" />
-            <div class="[ btn-group ]">
-                <label for="fancy-checkbox-default2" class="[ btn btn-default ]">
-                    <span class="[ glyphicon glyphicon-ok ]"></span>
-                    <span> </span>
-                </label>
-                <label for="fancy-checkbox-default2" class="[ btn btn-default active ]">
-                    Contacs
-                </label>
-            </div>
+
+
+
+    <div class="form-group badge-checkboxes">
+        <label>Select some options - inline checkboxes</label>
+        <div>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="">
+                <span class="badge">Option 1</span>
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="" checked="">
+                <span class="badge">Option 2</span>
+            </label>
+            <label class="checkbox-inline disabled">
+                <input type="checkbox" value="" disabled="">
+                <span class="badge">Option 3</span>
+            </label>
+            <label class="checkbox-inline disabled">
+                <input type="checkbox" value="" disabled="" checked="">
+                <span class="badge">Option 4</span>
+            </label>
         </div>
-</small>  
     </div>
 
 

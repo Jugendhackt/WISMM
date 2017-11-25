@@ -52,7 +52,7 @@
 <div class="container">
 
     <div class="starter-template">
-        
+
 
         <h1>INSERT PICTURE HERE</h1>
 
@@ -77,7 +77,9 @@
                 <br/>
                 <br/>
                 <br/>
-                <h1>FACEBOOK</h1>
+                <div class="jumbotron">
+                    <br/>
+                <h2>Search results of {search_querry_facebook} <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
                 <br/>
@@ -125,6 +127,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
     </div>

@@ -49,7 +49,11 @@
 <div class="container">
 
     <div class="starter-template">
+<<<<<<< HEAD
         <h1>DatenKrake INSERT PICTURE HERE</h1>
+=======
+        <h1>KrakenNetz</h1>
+>>>>>>> e490346cd0b8ced0127154ba51ef8466d8fd4b72
 
         <div class="row">
             <h2>Search and disturb our sources, alpacas!</h2>

@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WhoHasMyData</title>
+    <title>WISM</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">WhoHasMyData</a>
+            <a class="navbar-brand" href="#">WISM</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

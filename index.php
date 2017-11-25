@@ -126,7 +126,7 @@
                 <div class="jumbotron">
 
                         <br/>
-                        <h2><?php echo $out_sq ?> <a href="<?php echo $out_url ?>"><span class="glyphicon glyphicon-new-window"></span></a>
+                    <h2><?php echo $out_sq ?> <a href="<?php echo $out_url ?>" target="_blank"><small><span class="glyphicon glyphicon-new-window"></span></small></a>
                         </h2>
                         <br/>
                         <br/>

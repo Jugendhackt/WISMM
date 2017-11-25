@@ -1,3 +1,32 @@
+<?php
+
+    require "handler/dbH.php";
+
+
+    $out_sq = "Please search";
+
+    if(isset($_GET['search'])){
+        
+        $sq = $_GET['search'];
+
+        $result = $db->sendQuery("SELECT * FROM `network` WHERE `name` = '$sq'");
+
+        $rows = mysqli_num_rows($result);
+
+        //echo "<script type='text/javascript'>alert('$rows');</script>";
+
+        if ($rows > 0) {
+            $out_sq = "Search results for " . $sq;
+        }else{
+            $out_sq = "There are no search results for " . $sq;
+        }
+
+
+    }else{
+
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +144,7 @@
 
         <!-- <img src="./images/KrakenNetz.png" class="img-responsive" alt="KrakenNetzKrake"> -->
 
-        <h2>Stay transparent - Stay safe, alpacas!</h2>
+        <h2>Stay transparent - Stay safe - Stay alpacas!</h2>
         <div class="row">
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
@@ -138,7 +167,7 @@
                 <br/>
                 <div class="jumbotron">
                     <br/>
-                <h2>Search results of {search_querry_facebook} <span class="glyphicon glyphicon-new-window"></span></h2>
+                <h2><?php echo $out_sq ?> <span class="glyphicon glyphicon-new-window"></span></h2>
                 <br/>
                 <br/>
                 
@@ -220,22 +249,11 @@
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
-    <script>
-        function toggleIcon(e) {
-            $(e.target)
-                .prev('.panel-heading')
-                .find(".more-less")
-                .toggleClass('glyphicon-plus glyphicon-minus');
-        }
-        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
-        $('.panel-group').on('shown.bs.collapse', toggleIcon);
-    </script>
+
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
-

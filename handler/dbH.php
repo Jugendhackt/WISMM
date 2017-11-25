@@ -22,5 +22,9 @@
     }
 
   }
+
+
+  $db = new db();
+  $db->connect("xxxx", "xxxx", "xxxx", "xxxx");
   
 ?>

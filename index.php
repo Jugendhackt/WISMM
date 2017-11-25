@@ -93,7 +93,6 @@
         <h1>INSERT PICTURE HERE</h1>
 
         <div class="row">
-            <h2>Search and disturb our sources, alpacas!</h2>
             <div id="custom-search-input">
                 <div class="input-group col-md-12">
                     <form method="get">
@@ -107,6 +106,8 @@
                 </div>
             </div>
         </div>
+        <p>Search and disturb our sources, alpacas!</p>
+
 
 
 

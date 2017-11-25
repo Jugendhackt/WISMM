@@ -123,11 +123,7 @@
                             <input type="text" name="search" class="form-control" placeholder="Search Network...">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-<<<<<<< HEAD
-                                <h2>Stay transparent - Stay safe - Stay alpacas!</h2>
-=======
 
->>>>>>> 118dedf943d9294ecb0e306993cd8cbae77cf1c9
                             </div>
                         </div>
                     </form>

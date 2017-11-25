@@ -206,6 +206,24 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="checkboxes">previous data thefts:</label>
+                    <div class="col-md-4">
+
+                        <input name="ios_gps" id="ios_gps" type="checkbox">
+                        <label class="checkbox-inline" for="ios_gps">GPS</label>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tos_url">theft url:</label>
+                    <div class="col-md-4">
+                        <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
+                        <span class="help-block">help</span>
+                    </div>
+                </div>
+
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>

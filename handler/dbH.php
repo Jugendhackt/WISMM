@@ -18,8 +18,7 @@
       if($this->connection->connect_errno){
         return false;
       }
-      $this->connection->query($sql);
-      return true;
+      return $this->connection->query($sql);
     }
 
   }

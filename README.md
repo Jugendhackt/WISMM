@@ -6,7 +6,7 @@ Durch den Trend der sozialen Netzwerke und die schnelle Ausbreitung der SmartPho
 Bilder, Gedanken, Meinungen und ganze Tagesberichte über das eigene Leben werden mit der Öffentlichkeit geteilt.
 Die Sammlung vieler Daten über einen Zeitraum lässt bestimmen wie Nutzer:innen leben, reagieren und agieren. 
 
-Wie wir meinen, bildet sich eine Art von nachvollziehbaren Verstand welcher durch Datenschutzbestimmungen weitergegeben kann. 
+Wie wir meinen, bildet sich eine Art von nachvollziehbaren Verstand welcher durch Datenschutzbestimmungen weitergegeben werden kann.
 
 Da die Nutzungsbedingungen für die Masse der User oft zu lang zu lesen ist, sind diese schon konditoniert diese automatisiert zu bestätigen.
 

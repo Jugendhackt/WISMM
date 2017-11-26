@@ -221,12 +221,11 @@
 
                         <input id="textinput" name="theft_url" placeholder="https://" class="form-control input-md" type="text">
 
-                        <label class="col-md-4 control-label" for="theft_url">theft date:</label>
+                        <label class="col-md-4 control-label" for="theft_url">
+                            theft date:</label>
 
 
                         <input name="theft_date" type="date">
-
-                        <span class="help-block">help</span>
 
 
 
@@ -247,7 +246,7 @@
 
             </fieldset>
         </form>
-    </div>
+    </div>b
 
 </div><!-- /.container -->
 

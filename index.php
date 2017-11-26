@@ -97,7 +97,7 @@
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
-                        $sq = $_GET['search'];
+                        $sq = htmlentities($_GET['search']);
 
                         $result = $db->sendQuery("SELECT * FROM `network` WHERE `name` = '$sq'");
 
@@ -218,17 +218,15 @@
                                      aria-labelledby="headingThree">
                                     <div class="panel-body">
                                         <ul>
-                                            <li>Android permissions
+                                            <b>Android permissions</b>
                                                 <ul>
                                                     <?php echo $out_perms_android ?>
                                                 </ul>
-                                            </li>
 
-                                            <li>iOS permissions
+                                                <b>iOS permissions</b>
                                                 <ul>
                                                     <?php echo $out_perms_ios ?>
                                                 </ul>
-                                            </li>
                                         </ul>
 
                                     </div>

@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>WISM</title>
+    <title>WISMM</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">WISM</a>
+            <a class="navbar-brand" href="#">WISMM</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -91,6 +91,9 @@
 
                     $out_data = "";
                     $out_url = "";
+                    $out_relations = "";
+                    $out_perms_android = "";
+                    $out_perms_ios = "";
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
@@ -105,14 +108,42 @@
                             $out_url = $row->url;
 
                             $data = $row->data;
-                            $rels = explode(",", $data);
+                            $data = explode(",", $data);
 
-                            foreach ($rels as &$value) {
-                                
-                                $out_data .= "<li>$value</li>";
+                            foreach ($data as &$value_data) {
+                                $out_data .= "<li>$value_data</li>";
+                            }
+
+                            $rels = $row->relations;
+                            $rels = explode(",", $rels);
+
+                            foreach ($rels as &$value_rel) {
+
+                                $result = $db->sendQuery("SELECT `name`, `url` FROM `network` WHERE `network_id` = '$value_rel'");
+
+                                while ($row2 = $result->fetch_object()) {
+                                        
+                                    $out_relations .= "<li><a href=?search=" . $row2->name . ">" . $row2->name . "</a></li>";
+
+                                }
 
                             }
-                        
+
+                            $perms_android = $row->android;
+                            $perms_android = explode(",", $perms_android);
+
+                            foreach ($perms_android as &$value_perms_android) {
+                                $out_perms_android .= "<li>$value_perms_android</li>";
+                            }
+
+                            $perms_ios = $row->ios;
+                            $perms_ios = explode(",", $perms_ios);
+
+                            foreach ($perms_ios as &$value_perms_ios) {
+                                $out_perms_ios .= "<li>$value_perms_ios</li>";
+                            }
+
+
                         }
                         
                         //echo "<script type='text/javascript'>alert('$rows');</script>";
@@ -166,14 +197,9 @@
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
                                      aria-labelledby="headingTwo">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
+                                        <ul>
+                                            <?php echo $out_relations ?>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -191,14 +217,20 @@
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                                      aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
+                                        <ul>
+                                            <li>Android permissions
+                                                <ul>
+                                                    <?php echo $out_perms_android ?>
+                                                </ul>
+                                            </li>
+
+                                            <li>iOS permissions
+                                                <ul>
+                                                    <?php echo $out_perms_ios ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
                                     </div>
                                 </div>
                             </div>

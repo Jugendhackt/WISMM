@@ -94,6 +94,11 @@
                     $out_relations = "";
                     $out_perms_android = "";
                     $out_perms_ios = "";
+                    $out_theft_date = "";
+                    $out_theft_desc = "";
+                    $out_theft_url = "";
+                    $theft_url = "";
+
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
 
@@ -106,6 +111,7 @@
                         while($row = $result->fetch_object()) {
 
                             $out_url = $row->url;
+                            $net_id = $row->network_id;
 
                             $data = $row->data;
                             $data = explode(",", $data);
@@ -135,7 +141,7 @@
                             foreach ($perms_android as &$value_perms_android) {
                                 $out_perms_android .= "<li>$value_perms_android</li>";
                             }
-                            
+
                             $perms_ios = $row->ios;
                             $perms_ios = explode(",", $perms_ios);
 
@@ -143,8 +149,22 @@
                                 $out_perms_ios .= "<li>$value_perms_ios</li>";
                             }
 
+                            $result_thefts = $db->sendQuery("SELECT * FROM `data_theft` WHERE `network_id` = '$net_id'");
+
+                            while($row_theft = $result_thefts->fetch_object()) {
+
+                                $out_theft_date = "<li>$row_theft->theft_time</li>";
+                                $out_theft_desc = "<li>$row_theft->description</li>";
+                                $theft_url = $row_theft->theft_source;
+                                $out_theft_url = "<li>$row_theft->theft_source</li>";
+
+                            }
+
+
 
                         }
+
+
                         
                         //echo "<script type='text/javascript'>alert('$rows');</script>";
 
@@ -246,14 +266,28 @@
                                 <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
                                      aria-labelledby="headingFour">
                                     <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
+
+                                        <ul>
+                                            <li>theft Date
+                                                <ul>
+                                                    <?php echo $out_theft_date ?>
+                                                </ul>
+                                            </li>
+
+                                            <li>theft desc
+                                                <ul>
+                                                    <?php echo $out_theft_desc ?>
+                                                </ul>
+                                            </li>
+
+                                            <li>theft url
+                                                <ul>
+                                                    <a href="<?php echo $theft_url ?>"><?php echo $out_theft_url ?></a>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+
                                     </div>
                                 </div>
                             </div>

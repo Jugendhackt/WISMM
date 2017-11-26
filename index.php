@@ -135,7 +135,7 @@
                             foreach ($perms_android as &$value_perms_android) {
                                 $out_perms_android .= "<li>$value_perms_android</li>";
                             }
-
+                            
                             $perms_ios = $row->ios;
                             $perms_ios = explode(",", $perms_ios);
 

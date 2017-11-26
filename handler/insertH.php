@@ -11,6 +11,7 @@
 	$imprint_url = $_GET['imprint_url'];
 	$tos_url = $_GET['tos_url'];
 	$rel_ids = "";
+	$net_id = "";
 
 
 	if (isset($_GET['data_photos'])) {
@@ -57,7 +58,7 @@
 
 	foreach ($rels as $net_names) {
    		
-		$result = $db->sendQuery("SELECT `network_id` FROM `network` WHERE `name` LIKE '$net_names'");
+		$result = $db->sendQuery("SELECT `network_id` FROM `network` WHERE `name` = '$net_names'");
 
 		while($row = $result->fetch_object()) {
 		  	$rel_ids .= $row->network_id . ",";
@@ -66,6 +67,24 @@
 	}
 
 	$db->sendQuery("INSERT INTO `network` (`name`, `url`, `tos_url`, `data`, `ios`, `android`, `relations`) VALUES ('$network_name', '$network_url', '$tos_url', '$data', '$ios', '$android', '$rel_ids')");
+
+	if(isset($_GET['theft_trigger'])){
+
+		$theft_desc = $_GET['theft_desc'];
+		$theft_url = $_GET['theft_url'];
+		$theft_date = $_GET['theft_date'];
+
+		$result2 = $db->sendQuery("SELECT `network_id` FROM `network` WHERE `name` = '$network_name' LIMIT 1");
+
+		while($row2 = $result2->fetch_object()) {
+
+			$net_id = $row2->network_id;	
+
+		}
+
+		$db->sendQuery("INSERT INTO `data_theft` (`network_id`, `description`, `theft_source`, `theft_time`) VALUES ('$net_id', '$theft_desc', '$theft_url', '$theft_date')");
+
+	}
 
 	/*
 	echo("Name: " . $network_name . "<br>");

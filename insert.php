@@ -72,7 +72,7 @@
     <div class="jumbotron">
 
 
-        <form class="form-horizontal" action="" method="GET">
+        <form class="form-horizontal" action="handler/insertH.php" method="GET">
             <fieldset>
                 <!-- Form Name -->
                 <h2>Add new Network </h2>
@@ -203,7 +203,7 @@
                     <div class="col-md-4">
 
                     <label class="custom-control custom-checkbox">
-                        <input onchange="trigger_theft()" type="checkbox" class="custom-control-input" hidden="hidden">
+                        <input name="theft_trigger" onchange="trigger_theft()" type="checkbox" class="custom-control-input" hidden="hidden">
                         <span class="custom-control-indicator"></span>
                     </label>
 
@@ -211,11 +211,30 @@
                 </div>
 
                 <div class="form-group" id="theft_group" style="display: none">
-                    <label class="col-md-4 control-label" for="tos_url">source url:</label>
+                    <label class="col-md-4 control-label" for="theft_desc">theft desc:</label>
                     <div class="col-md-4">
-                        <input id="textinput" name="tos_url" placeholder="https://" class="form-control input-md" type="text">
+
+                        <textarea class="form-control input-md" name="theft_desc"></textarea>
+
+                        <label class="col-md-4 control-label" for="theft_url">theft url:</label>
+
+
+                        <input id="textinput" name="theft_url" placeholder="https://" class="form-control input-md" type="text">
+
+                        <label class="col-md-4 control-label" for="theft_url">theft date:</label>
+
+
+                        <input name="theft_date" type="date">
+
                         <span class="help-block">help</span>
+
+
+
                     </div>
+
+
+
+
                 </div>
 
                 <!-- Button -->

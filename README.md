@@ -8,7 +8,7 @@ Die Sammlung vieler Daten über einen Zeitraum lässt bestimmen wie Nutzer:innen
 
 Wie wir meinen, bildet sich eine Art von nachvollziehbaren Verstand welcher durch Datenschutzbestimmungen weitergegeben kann. 
 
-Da die Nutzungsbedingungen für die Masse der User oft zu lang zu lesen ist sind diese schon konditoniert diese automatisiert zu bestätigen.
+Da die Nutzungsbedingungen für die Masse der User oft zu lang zu lesen ist, sind diese schon konditoniert diese automatisiert zu bestätigen.
 
 # Was genau ist WISMM ?
 

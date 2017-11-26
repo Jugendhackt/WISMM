@@ -2,14 +2,11 @@
 Where is my Mind ? 
 
 Durch den Trend der sozialen Netzwerke und die schnelle Ausbreitung der SmartPhones war keine Zeit ein kollektives Bewusstsein zu schaffen welches die Nutzer:innen zu einer achtsameren Nutzung des Internets verhilft.
+
 Bilder, Gedanken, Meinungen und ganze Tagesberichte über das eigene Leben werden mit der Öffentlichkeit geteilt.
 Die Sammlung vieler Daten über einen Zeitraum lässt bestimmen wie Nutzer:innen leben, reagieren und agieren. 
+
 Wie wir meinen, bildet sich eine Art von nachvollziehbaren Verstand welcher durch Datenschutzbestimmungen weitergegeben kann. 
-
-Where is my Mind ? 
-
-# Vorwort
-Das geistige Gut welches Nutzer:innen in sozialen Netzwerken posten kann laut Datenschutzvereinbarung von den besagten Netzwerken weiterverwendet werden.
 
 Da die Nutzungsbedingungen für die Masse der User oft zu lang zu lesen ist sind diese schon konditoniert diese automatisiert zu bestätigen.
 

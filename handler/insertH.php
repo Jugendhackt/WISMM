@@ -98,7 +98,7 @@
 	*/
 	
 
-	header('Location: ../insert.php');
+	header('Location: ../index.php?search=' . $network_name);
 
 
 ?>

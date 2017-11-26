@@ -170,9 +170,9 @@
                     $out_relations = "";
                     $out_perms_android = "";
                     $out_perms_ios = "";
-                    $out_theft_date = "";
-                    $out_theft_desc = "";
-                    $out_theft_url = "";
+                    $out_theft_date = "no information";
+                    $out_theft_desc = "no information";
+                    $out_theft_url = "no information";
                     $theft_url = "";
 
 
@@ -227,14 +227,20 @@
 
                             $result_thefts = $db->sendQuery("SELECT * FROM `data_theft` WHERE `network_id` = '$net_id'");
 
-                            while($row_theft = $result_thefts->fetch_object()) {
+                            $rows_theft = mysqli_num_rows($result_thefts);
 
-                                $out_theft_date = "<li>$row_theft->theft_time</li>";
-                                $out_theft_desc = "<li>$row_theft->description</li>";
-                                $theft_url = $row_theft->theft_source;
-                                $out_theft_url = "<li>$row_theft->theft_source</li>";
+                            if ($rows_theft > 0) {
+                                
+                                while($row_theft = $result_thefts->fetch_object()) {
 
+                                    $out_theft_date = "<li>$row_theft->theft_time</li>";
+                                    $out_theft_desc = "<li>$row_theft->description</li>";
+                                    $theft_url = $row_theft->theft_source;
+                                    $out_theft_url = "<li>$row_theft->theft_source</li>";
+
+                                }
                             }
+
 
 
 
@@ -243,6 +249,7 @@
 
                         
                         //echo "<script type='text/javascript'>alert('$rows');</script>";
+                        //echo "<script type='text/javascript'>alert('$rows_theft');</script>";
 
                         if ($rows > 0) {
                             $found = true;

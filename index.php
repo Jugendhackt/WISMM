@@ -174,6 +174,7 @@
                     $out_theft_desc = "no information";
                     $out_theft_url = "no information";
                     $theft_url = "";
+                    $tos_url = "";
 
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])) {
@@ -185,6 +186,8 @@
                         $rows = mysqli_num_rows($result);
 
                         while($row = $result->fetch_object()) {
+
+                            $tos_url = $row->tos_url;
 
                             $out_url = $row->url;
                             $net_id = $row->network_id;
@@ -262,6 +265,7 @@
                         <br/>
                     <h2><?php echo $out_sq ?> <a href="<?php echo $out_url ?>" target="_blank"><small><span class="glyphicon glyphicon-new-window"></span></small></a>
                         </h2>
+                        <h2>AGB <a href="<?php echo $tos_url ?>" target="_blank"><small><span class="glyphicon glyphicon-new-window"></span></small></a></h2>
                         <br/>
                         <br/>
 

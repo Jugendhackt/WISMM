@@ -138,7 +138,6 @@
     box-shadow: none !important; 
   }
 
-
       .panel-group .panel-heading + .panel-collapse > .panel-body {
         border: 1px solid #ddd;
     }
@@ -192,4 +191,13 @@
     .panel-group .panel-body ul:last-child,
     .panel-group .panel-body ol:last-child {
         margin-bottom: 0;
+    }
+    /* Custom link color */
+     a:hover {
+         color: dodgerblue;
+         text-decoration: none;
+     }
+    a {
+        color: dodgerblue;
+        text-decoration: none;
     }

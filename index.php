@@ -121,20 +121,6 @@
             };
         </script>
 
-        <style>
-            /* mouse over link */
-            a:hover {
-                color: dodgerblue;
-                text-decoration: none;
-            }
-            a {
-                color: dodgerblue;
-                text-decoration: none;
-            }
-
-        </style>
-
-
         <img src="https://github.com/Jugendhackt/KrakenNetz/blob/master/images/Lupe_2.png?raw=true" class="img.responsive" width="15%" alt="Lupe">
         <h2>
             <a class="typewrite" data-period="2000" data-type='[ "Stay Transparent.", "Stay Safe.", "Love Jugend hackt <3" ]'>

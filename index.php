@@ -44,11 +44,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">WISMM</a>
+            <a class="navbar-brand" href="index.php">WISMM</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Search <span class="glyphicon glyphicon-search"></span></a></li>
+                <li class="active"><a href="index.php">Search <span class="glyphicon glyphicon-search"></span></a></li>
                 <li><a href="insert.php">Add Network <span class="glyphicon glyphicon-plus-sign"></span></a></li>
             </ul>
         </div><!--/.nav-collapse -->

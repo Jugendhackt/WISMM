@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
+    <meta name="description" content="WISMM is a online platform which select data from other platform and shows the user what private data will be saved, are there any data thefts and which relations are between the social platforms.">
     <meta name="author" content="">
 
     <title>WISMM</title>
